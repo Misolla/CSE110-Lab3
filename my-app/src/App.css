@@ -1,0 +1,141 @@
+ body {
+  margin: 20px;
+  background-color: lightgrey;
+ }
+ 
+ .app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  grid-template-columns: 1fr;
+  height: 900px;
+ }
+ 
+ @media (min-width: 600px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+ }
+ 
+ .notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 20px;
+  margin-left: 5%;
+ }
+ 
+ .note-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+ }
+ 
+ .notes-header {
+  display: flex;
+  justify-content: flex-end;
+ }
+ 
+ .notes-header button {
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: fit-content;
+ }
+ 
+ h2 {
+  margin: 0;
+ }
+ 
+ .note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+ 
+ textarea,
+ input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+ }
+
+ select {
+  font-size: 16px;
+ }
+
+ button {
+  width: 110%;
+ }
+
+ .note-form button {
+  border-radius: 5px;
+  background-color: rgb(64, 154, 184);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+ }
+ 
+ .note-form button:hover {
+  background-color: rgb(106, 175, 198);
+  cursor: pointer;
+ }
+ 
+ .edit-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+ }
+ 
+ .edit-buttons button {
+  flex: 1;
+ }
+ 
+ .edit-buttons button:last-of-type {
+  background-color: rgb(220, 89, 89);
+  color: white;
+ }
+
+ .favorite-icon {
+  font-size: 16px; /* Set the size of the heart icon */
+  cursor: pointer;  /* Change the cursor to indicate it's clickable */
+  transition: color 0.3s; /* Smooth transition for color change */
+ }
+
+ .favorited {
+  color: red; /* Color for the filled heart */
+ }
+
+ .favorite-notes {
+  position: absolute; /* Make it absolute for better positioning */
+  bottom: 10px; /* Adjust as necessary */
+  left: 10px; /* Adjust as necessary */
+  z-index: 10; /* Ensure it's above other elements */
+ }
+
+ .favorite-notes h3 {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 25px;
+ }
+
+
+ .favorite-notes ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0;
+  margin-left: 20px;
+ }
+
